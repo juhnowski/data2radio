@@ -1,13 +1,16 @@
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 
 public class receiver {
     public static void prn(byte[] a){
         for(int i=0; i< a.length ; i++) {
             System.out.print(a[i] +" ");
         }
-        System.out.println("---------------");
+        System.out.println("");
+        String s = new String(a, StandardCharsets.US_ASCII);
+        System.out.println(s);
     }
 
     public static void main(String[] args) {
